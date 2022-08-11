@@ -6,6 +6,8 @@ const schema = new Schema({
   name: {},
   age: {},
   price: {},
+  rating: {},
+  company: {},
 });
 
 const User = mongoose.model('Store API', schema);
