@@ -1,7 +1,7 @@
-const { User } = require('../../../database/models/mongo');
+const { findUser } = require('../../../database/repositories/user');
 
 const retrieveAllItems = async () => {
-  const result = await User.find({});
+  const result = await findUser({});
   return result;
 };
 

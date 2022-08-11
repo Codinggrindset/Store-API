@@ -1,5 +1,5 @@
-const { User } = require('../../../database/models/mongo');
+const { deleteAll } = require('../../../database/repositories/user');
 
-const clearItems = async () => User.deleteMany({});
+const clearItems = async () => deleteAll({});
 
 module.exports = clearItems;

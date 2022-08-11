@@ -1,4 +1,4 @@
-const retrieveAllItems = require("../controllers/allProducts")
+const retrieveAllItems = require('../controllers/allProducts');
 
 const getAllItems = async (req, res) => {
   const result = await retrieveAllItems();
