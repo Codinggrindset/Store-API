@@ -1,8 +1,5 @@
 const { User } = require('../../../database/models/mongo');
 
-const clearItems = async () => {
-  const collection = await User.findOneAndDelete({});
-  return collection;
-};
+const clearItems = async () => User.deleteMany({});
 
 module.exports = clearItems;

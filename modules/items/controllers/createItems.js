@@ -1,9 +1,6 @@
 const { User } = require('../../../database/models/mongo');
 const items = require('../../../utils/items');
 
-const generateItems = async () => {
-  const collection = await User.create(items);
-  return collection;
-};
+const generateItems = async () => User.create(items);
 
 module.exports = generateItems;
