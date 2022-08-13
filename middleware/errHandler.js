@@ -1,4 +1,4 @@
-const { ApiError } = require('../utils/errors/apiError');
+const ApiError = require('../utils/errors/apiError');
 
 // eslint-disable-next-line no-unused-vars
 const handleError = (error, req, res, next) => {
@@ -10,6 +10,8 @@ const handleError = (error, req, res, next) => {
     code = error.code;
     message = error.message;
   }
+  console.log(error);
+  console.log('ABOVE ERROR');
   return res.status(code).json({ success: false, message });
 };
 

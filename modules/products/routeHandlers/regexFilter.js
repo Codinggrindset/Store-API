@@ -1,9 +1,9 @@
 const asyncWrapper = require('../../../utils/asyncWrapper');
-const selectItems = require('../controllers/filter');
+const selectItemsWithRegex = require('../controllers/regexFilter');
 
-const filterItems = asyncWrapper(async (req, res) => {
+const filterItemsWithRegex = asyncWrapper(async (req, res) => {
   const queryCopy = req.query;
-  const result = await selectItems(queryCopy);
+  const result = await selectItemsWithRegex(queryCopy);
   let message;
   if (result.length !== 0) {
     message = 'Here are the filtered items';
@@ -13,4 +13,4 @@ const filterItems = asyncWrapper(async (req, res) => {
   res.json({ success: true, message, data: result });
 });
 
-module.exports = filterItems;
+module.exports = filterItemsWithRegex;
